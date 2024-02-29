@@ -1,0 +1,47 @@
+\documentclass[preprint]{elsarticle}
+\usepackage{subfiles}
+\usepackage{lineno,hyperref}
+% \modulolinenumbers5
+
+\journal{TBD}
+
+\title{Research on water status detection method of high-power fuel cell system based on water balance model}
+
+\author[a]{Yiyu Zhong}
+\author[a,b]{Yanbo Yang\corref{mycorrespondingauthor}}
+\ead{yanbo.yang@example.com}
+\author[c]{Lipeng Diao}
+\author[a]{Naiyuan Yao}
+\author[a,b]{Tiancai Ma}
+\author[a]{Weikang Lin}
+\address[a]{School of Automotive Studies, Tongji University, Shanghai, 201804, China}
+\address[b]{Institute of Carbon Neutrality, Tongji University, Shanghai, 200092, China}
+\address[c]{Beijing Electrical Research Institute, Beijing ,100070, China}
+
+\cortext[mycorrespondingauthor]{Corresponding author}
+\begin{document}
+\begin{abstract}
+    
+    With the gradually accelerating pace of global decarbonization, highly efficient and clean proton exchange membrane fuel cells(PEMFC) are considered one of the solutions for future energy.
+    During the operation of the fuel cell, it is necessary to keep the internal proton exchange membrane in a good state of hydration, so an appropriate method of detecting the hydration state is essential.
+    At present, the fuel cell system is rapidly developing towards high power, but the methods for detecting the hydration state of high-power fuel cell systems are still relatively lacking.
+    Therefore, this paper studies the hydration state of high-power fuel cell systems and builds a condensation tail gas water collection device for calculating the water flow out of the fuel cell system.
+    To verify the water balance model, a controlled variable experiment was conducted on a 100kW fuel cell system under different working temperatures, air metering ratios, and load currents.
+    Finally, based on the experimental data, the change rate of the internal water content of the fuel cell system under different conditions was calculated. The results show that, under the same load current, as the working temperature and air metering ratio increase, the change rate of the internal water content of the fuel cell system gradually decreases. Therefore, at low power, it is necessary to maintain an appropriate working temperature, while at high power, maintaining an appropriate metering ratio is more important.
+\end{abstract}
+    \begin{keyword}
+        PEMFC \sep water content \sep water balance\sep high power fuel cell system
+    \end{keyword}
+    
+    \maketitle
+    \subfile{Chapter1_Introduction.tex}
+    \subfile{Chapter2_Experiment.tex}
+    \subfile{Chapter3_Results.tex}
+    \subfile{Chapter4_Conclusion.tex}
+    
+
+This is the Conclusion
+
+\bibliographystyle{elsarticle-num}
+\bibliography{ref.bib}
+\end{document}
