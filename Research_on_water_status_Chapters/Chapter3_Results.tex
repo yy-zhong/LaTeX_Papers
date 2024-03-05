@@ -4,23 +4,81 @@
 Figure \ref{fig:fig4a} shows the change in the water flow out of the air side at different working temperatures. As can be seen from the figure \ref{fig:fig5a}, as the temperature rises, the water content in the air side exhaust gas generally shows an upward trend. The higher the temperature, the higher the saturation vapor pressure of the fuel cell. Under the same water content, the relative humidity will decrease at this time, which is equivalent to the generation of less liquid water inside the fuel cell, and the ability of the gas to carry water is improved. This change applies to both the air side and the hydrogen side, which is shown in figure \ref{fig:fig4b} and figure \ref{fig:fig4c}. Therefore, under the same other conditions, the water flow out of the fuel cell stack by the air increases with the increase in temperature, and more liquid water is collected by the air side exhaust gas collection device.
 \par
 It is worth noting that when the load current is 120A, the impact of the working temperature on the water flow of the air side is slightly different under different metering ratios. As the air metering ratio increases, the growth rate of the water flow on the air side gradually decreases. This is because at a small current density, the fuel cell produces less water due to the electrochemical reaction, and at the same time, the high-speed high-temperature reaction gas has a strong ability to carry water, and the water produced by the fuel cell has been completely carried out by the reaction gas. Therefore, even if the air metering ratio increases, the reaction gas cannot carry out more water. For the working conditions of low working temperature and large load current, the ability of the reaction gas to carry water is low or the fuel cell produces more water, so there is still some water vapor or liquid water remaining in the system. At this time, if the air flow is increased, the water flow out of the system will also increase accordingly.
-\begin{figure}
-	\label{fig:figure4}
-	\subfigure[]{
-		\label{fig:fig4a}
-		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4a.png}
-	}
-	\subfigure[]{
-		\label{fig:fig4b}
-		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4b.png}
-	}
-	\subfigure[]{
-		\label{fig:fig4c}
-		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4c.png}
-	}
+\begin{tikzpicture}
+	\begin{axis}[
+			title={Temperature dependence of water flow at different ratios},
+			xlabel={Temperature},
+			ylabel={Water flow},
+			xmin=50, xmax=75,
+			ymin=2, ymax=5.5,
+			legend pos=north west,
+			ymajorgrids=true,
+			grid style=dashed,
+		]
 
-	\caption{Comparison of water flow rate flowing out of the air side at different operating temperatures (a:120A; b:210A; c:300A; vertical water flow; horizontal as temperature; starting point from top to bottom is ordered by flow rate: 2.0/2.2/2.4/2.6)}
-\end{figure}
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A.csv};
+		\addlegendentry{Ratio 2.0}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A.csv};
+		\addlegendentry{Ratio 2.2}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A.csv};
+		\addlegendentry{Ratio 2.4}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A.csv};
+		\addlegendentry{Ratio 2.6}
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A.csv};
+		\addlegendentry{Ratio 2.8}
+	\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\begin{axis}[
+			title={Temperature dependence of water flow at different ratios},
+			xlabel={Temperature},
+			ylabel={Water flow},
+			xmin=50, xmax=75,
+			ymin=4.0, ymax=8.0,
+			ytick distance = 0.5,
+			legend pos=north west,
+			ymajorgrids=true,
+			grid style=dashed,
+		]
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A.csv};
+		\addlegendentry{Ratio 1.8}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A.csv};
+		\addlegendentry{Ratio 2.0}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A.csv};
+		\addlegendentry{Ratio 2.2}
+
+		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A.csv};
+		\addlegendentry{Ratio 2.4}
+
+	\end{axis}
+\end{tikzpicture}
+
+
+% \begin{figure}
+% 	\label{fig:figure4}
+% 	\subfigure[]{
+% 		\label{fig:fig4a}
+% 		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4a.png}
+% 	}
+% 	\subfigure[]{
+% 		\label{fig:fig4b}
+% 		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4b.png}
+% 	}
+% 	\subfigure[]{
+% 		\label{fig:fig4c}
+% 		\includegraphics[width=7cm, height=4.5cm]{Research_pictures/fig4c.png}
+% 	}
+
+% 	\caption{Comparison of water flow rate flowing out of the air side at different operating temperatures (a:120A; b:210A; c:300A; vertical water flow; horizontal as temperature; starting point from top to bottom is ordered by flow rate: 2.0/2.2/2.4/2.6)}
+% \end{figure}
 
 \par
 Fig \ref{fig:fig5a} shows that as the temperature rises, the water content in the hydrogen side exhaust gas generally shows a downward trend, and even at 120A/70$^{\circ}C$, the water content in the hydrogen side exhaust gas is 0, the same result appears in 210A(fig \ref{fig:fig5b}) and 300A(fig \ref{fig:fig5c}). There are mainly two reasons for this phenomenon.  First, according to the principle of proton exchange membrane fuel cell reaction, the reaction product water is generated at the cathode (that is, the air side), and the fuel used by the fuel cell system is 99.99\% pure hydrogen. Therefore, the water inside the hydrogen side is mainly the water that migrates from the air side to the hydrogen side under the action of concentration diffusion and pressure diffusion. Since the hydrogen-air pressure difference is basically consistent (20kpa) during the experiment, the influence of pressure on water migration can be ignored when comparing. Second, the exhaust gas collected on the anode side needs to first pass through the water separator built into the fuel cell system to separate the unreacted hydrogen from the liquid water, and then it can be collected by the exhaust water collection device on the hydrogen side. And at higher working temperatures, the saturation vapor pressure of the gas on the hydrogen side rises, and the content of liquid water decreases relatively. These two factors cause the working temperature to rise and the water content flowing out of the hydrogen side to decrease.
