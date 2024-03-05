@@ -1,0 +1,46 @@
+\documentclass[preprint]{elsarticle}
+\usepackage{subfiles}
+\usepackage{lineno,hyperref}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{nomencl}
+\makenomenclature
+% \modulolinenumbers5
+
+\journal{Energy Conversion Management}
+
+\title{Design of Multi-Sensor Fusion Water State Observer for Proton Exchange Membrane Fuel Cell based on Particle Filter}
+
+\author[a]{Yiyu Zhong}
+\author[a]{Yanbo Yang\corref{mycorrespondingauthor}}
+\ead{yanbo.yang@example.com}
+\author[c]{Lipeng Diao}
+\author[a]{Ruitao Li}
+\author[a]{Naiyuan Yao}
+\author[a,b]{Tiancai Ma}
+\author[a]{Weikang Lin}
+\address[a]{School of Automotive Studies, Tongji University, Shanghai, 201804, China}
+\address[b]{Institute of Carbon Neutrality, Tongji University, Shanghai, 200092, China}
+\address[c]{Beijing Electrical Research Institute, Beijing ,100070, China}
+
+\cortext[mycorrespondingauthor]{Corresponding author}
+\begin{document}
+\begin{abstract}
+
+    Inadequate water management restricts the reliability and lifetime of proton exchange membrane fuel cells (PEMFC). Thus, it is necessary to identify the internal water state of the PEMFC accurately and quickly, and control it within a reasonable range. The online indirect method is a promising technology to be used for observation and the internal state of the PEMFC can be estimated online by simplifying the mechanism model. However, the existing simplified mechanism models do not distinguish the flow channel, the gas diffusion layer, and the catalytic layer. Meanwhile, the water content in the ionomer, the saturation of liquid water, and the pressure of water vapor are rarely considered in the proton exchange membrane (PEM) models. In addition, affected by factors such as the inaccuracy of the simplified mechanism model and actual system interference, the fuel cell water state estimation error is large. Thus, in this work, a simplified mechanism model of PEM containing water content in ionomer, liquid water, and water vapor is established. Then, the influence of measurement noise and process noise set values on the performance of the observer is analyzed. The observer can exhibit the best performance when the noise variance is set as $10^{-4}$ and the process noise is set as $10^{-8}$ to match the actual noise variance. Finally, an internal state observer based on the model and the particle filter algorithm is developed. Based on the simulation, the internal water state trend of the PEMFC is analyzed, and the performance of the state observer based on voltage, high frequency resistance, and sensor fusion is compared. The results show that the observer based on sensor fusion is good at observing the water state. 
+\end{abstract}
+% \begin{keyword}
+%     PEMFC \sep water content \sep water balance\sep high power fuel cell system
+% \end{keyword}
+\maketitle
+
+% \subfile{Sensor_Fusion_chapters/nom.tex}
+\renewcommand{\nomname}{List of Abbreviations}
+
+
+\printnomenclature
+NLP is a field of computer science, artificial intelligence, and linguistics concerned with the interactions between computers and human (natural) languages.
+\nomenclature{NLP}{Natural Language Processing}
+% \bibliographystyle{elsarticle-num}
+% \bibliography{Research_on_water_status_Chapters/ref.bib}
+\end{document}
