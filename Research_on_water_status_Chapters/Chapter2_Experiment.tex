@@ -9,7 +9,7 @@ The literature indicates that the factors that have the greatest impact on the w
 		\label{tab:WaterStateExperimentalParameterTable}
 		\begin{tabular}{l|c|r}
 			\hline
-			\textbf{Load current/A/currency density/A·cm-2} & \textbf{Working temperature/℃} & \textbf{Air metering ratio} \\
+			\textbf{Load current/A/currency density/$A·cm^{-2}$} & \textbf{Working temperature/$^{\circ}C$} & \textbf{Air metering ratio} \\
 			\hline
 			120/0.4                                         & 55,60,65,70,73                 & 2,2.2,2.4,2.6,2.8           \\
 			210/0.7                                         & 55,60,65,70,73                 & 1.8,2,2.2,2.4               \\
@@ -85,8 +85,9 @@ The water flow produced by electrochemical reaction can be presented as formula 
 \subsection*{The water flow out of the system from the air side and the hydrogen side}
 To measure the water flow out of the system from the air and hydrogen sides, this article has designed an exhaust water content detection device centered on condensation.
 \begin{figure}
+	\centering
 	\label{fig:water_detection_device_diagram}
-	\includegraphics{Research_pictures/picture3.png}[scale=0.4]
+	\includegraphics[scale=0.6]{Research_pictures/picture3.png}
 	\caption[short]{Schematic diagram of exhaust gas water content detection device}
 \end{figure}
 The exhaust water content detection device on the air side is composed of a heat exchanger, a water separator, a temperature sensor, and a water collection device with a liquid level sensor. The basic principle is to condense the high-temperature supersaturated exhaust gas on the air side, and then separate the liquid water inside from the exhaust gas through the water separator, thus obtaining saturated low-temperature exhaust gas and liquid water. Collect the separated liquid water and collect the liquid level with a liquid level sensor.
@@ -114,7 +115,7 @@ $m_{w,ancollect}$ represents the mass of the liquid collected by the exhaust wat
 \subsection*{Test methods}
 In sequence, turn on host computer, system controller, electronic load, auxiliary devices, and impedance testing system; Turn on the water pump, solenoid valve, proportional valve, back pressure valve, air compressor, drain valve, and hydrogen circulation pump in sequence, setting the anode inlet gas pressure 10kPa higher than the cathode inlet gas pressure ($\Delta p=20kPa$).
 \par
-Gradually load the system to 120A, adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air flow rate reaches the air metering coefficient of 2.8 corresponding to the target current, gradually raise the working temperature to 55±1℃, and start the temperature closed-loop control program to maintain this temperature; After the working temperature is stable at 55±1℃, start timing and run for a total of 15 minutes; Adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air metering ratio gradually decreases in the range of 2 ~2.8 with a step size of 0.2; Raise the working temperature to 60±1℃, 65±1℃, 70±1 , 73±1℃, repeat the testing phase and record the experimental data.
+Gradually load the system to 120A, adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air flow rate reaches the air metering coefficient of 2.8 corresponding to the target current, gradually raise the working temperature to $55\pm1^{\circ}C$, and start the temperature closed-loop control program to maintain this temperature; After the working temperature is stable at $55\pm1^{\circ}C$, start timing and run for a total of 15 minutes; Adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air metering ratio gradually decreases in the range of 2 \~ 2.8 with a step size of 0.2; Raise the working temperature to $60\pm1^{\circ}C$, $65\pm1^{\circ}C$, $70\pm1^{\circ}C$ , $73\pm1^{\circ}C$, repeat the testing phase and record the experimental data.
 \par
 Load up to 210A, 300A, repeat all recording steps, until all operating points water content detection experiments are completed.
 \par

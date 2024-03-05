@@ -1,4 +1,32 @@
 \section{Introduction}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        title={Airside waterflow at 300A load current },
+        xlabel={Working Temperature/$^{\circ}C$},
+        ylabel={Air Side Waterflow/ $g \cdot s^{-1}$},
+        xmin=60, xmax=75,
+        ymin=7, ymax=10,
+        legend pos=north west,
+        ymajorgrids=true,
+        grid style=dashed,
+    ]
+    
+    \addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A.csv};
+    \addlegendentry{Ratio 1.8}
+    
+    \addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A.csv};
+    \addlegendentry{Ratio 2.0}
+    
+    \addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A.csv};
+    \addlegendentry{Ratio 2.2}
+    
+    \addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A.csv};
+    \addlegendentry{Ratio 2.4}
+    
+    \end{axis}
+    \end{tikzpicture}
+
 Proton exchange membrane fuel cells (PEMFCs), henceforth denoted as fuel cells, facilitate the direct conversion of chemical energy present in hydrogen into electrical energy.
 These fuel cells are characterized by their high energy utilization rate, low operating temperature, and the production of water as the sole reaction byproduct.
 Their versatility allows them to function not only as a small-scale distributed power supply but also as the energy source for high-power transportation systems, thus demonstrating their broad applicability \cite{sharafOverviewFuelCell2014} .
@@ -33,6 +61,8 @@ The pressure drop between the inlet and outlet of the fuel cell is mainly caused
     \centering
     \label{fig:figure1}
     \includegraphics{Research_pictures/Fig1.jpg}
+    % \includesvg{Research_pictures/1.svg}
+    % \includegraphics{Research_pictures/1.svg}
     \caption[short]{The change of cathode and anode voltage drop with time during flooding process}
 \end{figure}
 The detection methods based on electrochemical signals mainly include electrochemical impedance spectroscopy, current interruption method, and cyclic voltammetry, etc. Among them, electrochemical impedance spectroscopy is the most common hydration state detection method because it can distinguish different electrochemical processes and can be tested online \cite{yousfisteinerDiagnosisPolymerElectrolyte2011,chenOperationCharacteristicsCarbon2015}. The figure \ref{fig:figure1} shows the difference in fuel cell impedance spectra under different air humidity conditions. As the air humidity decreases, the value of the high-frequency impedance segment (i.e., the intercept of the impedance spectrum with the real axis) gradually increases, the impedance spectrum moves to the right, and the radius of the low-frequency arc segment also gradually increases \cite{hussainiVisualizationQuantificationCathode2009}, which can be used as an indicator of the hydration state of the fuel cell.
