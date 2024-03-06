@@ -1,11 +1,12 @@
 INFO:  latexindent.exe version 3.23.6, 2024-01-17, a script to indent .tex files
        latexindent.exe lives here: C:/DEV_TOOL/
-       Tue Mar  5 14:11:04 2024
-       Filename: .\Chapter3_Results.tex
+       Wed Mar  6 11:16:30 2024
+       Filename: d:/CODES/LaTeX_Papers/Research_on_water_status_Chapters/__latexindent_temp_Airside_Waterflow_figure_grouped_by_temperature.tex
 INFO:  Processing switches:
-       -o|--outputfile: output to file
-INFO:  Directory for backup files and indent.log:
-       .
+       -y|--yaml: YAML settings specified via command line
+       -c|--cruft: cruft directory
+INFO:  Directory for backup files and d:/CODES/LaTeX_Papers//indent.log:
+       d:/CODES/LaTeX_Papers/
 INFO:  YAML settings read: defaultSettings.yaml
        Reading defaultSettings.yaml from C:/DEV_TOOL/defaultSettings.yaml
        Reading defaultSettings.yaml (2nd attempt) from C:/DEV_TOOL/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
@@ -14,13 +15,16 @@ INFO:  YAML reading settings
        Home directory is C:\Users\Yiyu
        latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
        see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
-INFO:  -o switch active: output file check
+INFO:  YAML settings read: -y switch
+       YAML setting: defaultIndent:'\t'
+       single-quoted string found in -y switch: '\t', substitute to 	
+       Updating mainSettings with defaultIndent: 	
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects
 INFO:  Phase 4: final indentation check
 INFO:  Output routine:
-       Outputting to file ch3.tex
+       Not outputting to file; see -w and -o switches for more options.
        --------------
 INFO:  Please direct all communication/issues to:
         https://github.com/cmhughes/latexindent.pl

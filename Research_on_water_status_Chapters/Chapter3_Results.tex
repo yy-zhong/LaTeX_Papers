@@ -5,146 +5,20 @@ Figure \ref{fig:fig4a} shows the change in the water flow out of the air side at
 \par
 It is worth noting that when the load current is 120A, the impact of the working temperature on the water flow of the air side is slightly different under different metering ratios. As the air metering ratio increases, the growth rate of the water flow on the air side gradually decreases. This is because at a small current density, the fuel cell produces less water due to the electrochemical reaction, and at the same time, the high-speed high-temperature reaction gas has a strong ability to carry water, and the water produced by the fuel cell has been completely carried out by the reaction gas. Therefore, even if the air metering ratio increases, the reaction gas cannot carry out more water. For the working conditions of low working temperature and large load current, the ability of the reaction gas to carry water is low or the fuel cell produces more water, so there is still some water vapor or liquid water remaining in the system. At this time, if the air flow is increased, the water flow out of the system will also increase accordingly.
 
-\begin{figure}[ht]
-	\label{figure4}
-	\centering
-	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_120A_ratio}
-		\begin{axis}[
-				title={Airside waterflow at 120A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-				xmin=50, xmax=75,
-				ymin=2.5, ymax=5.5,
-				ytick distance = 0.5,
-				legend pos=north west,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.6}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.8}
-		\end{axis}
-	\end{tikzpicture}
-	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_210A_ratio}
-		\begin{axis}[        
-				title={Airside waterflow at 210A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-				xmin=50, xmax=75,
-				ymin=4, ymax=8.0,
-				legend pos=north west,
-				ytick distance = 0.5,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 1.8}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-		\end{axis}
-	\end{tikzpicture}
-	\begin{tikzpicture}[scale=0.6]
-		\centering
-		\label{fig:airside_waterflow_300A_ratio}
-		\begin{axis}[        
-				title={Airside waterflow at 300A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water flow/$g \cdot s^{-1}$},
-				xmin=60, xmax=75,
-				ymin=7, ymax=10.5,
-				legend pos=north west,
-				ytick distance = 0.5,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 1.8}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-		\end{axis}
-	\end{tikzpicture}
-	\caption{S:DLFK}
-\end{figure}
-		
-
+\subfile{Airside_Waterflow_figure_1.tex}
 \par
 Fig \ref{fig:fig5a} shows that as the temperature rises, the water content in the hydrogen side exhaust gas generally shows a downward trend, and even at 120A/70$^{\circ}C$, the water content in the hydrogen side exhaust gas is 0, the same result appears in 210A(fig \ref{fig:fig5b}) and 300A(fig \ref{fig:fig5c}). There are mainly two reasons for this phenomenon.  First, according to the principle of proton exchange membrane fuel cell reaction, the reaction product water is generated at the cathode (that is, the air side), and the fuel used by the fuel cell system is 99.99\% pure hydrogen. Therefore, the water inside the hydrogen side is mainly the water that migrates from the air side to the hydrogen side under the action of concentration diffusion and pressure diffusion. Since the hydrogen-air pressure difference is basically consistent (20kpa) during the experiment, the influence of pressure on water migration can be ignored when comparing. Second, the exhaust gas collected on the anode side needs to first pass through the water separator built into the fuel cell system to separate the unreacted hydrogen from the liquid water, and then it can be collected by the exhaust water collection device on the hydrogen side. And at higher working temperatures, the saturation vapor pressure of the gas on the hydrogen side rises, and the content of liquid water decreases relatively. These two factors cause the working temperature to rise and the water content flowing out of the hydrogen side to decrease.
 
-% \begin{figure}
-% 	\label{fig:figure5}
-% 	\subfigure[]{
-% 		\label{fig:fig5a}
-% 		\includegraphics{Research_pictures/fig5a.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig5b}
-% 		\includegraphics{Research_pictures/fig5b.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig5c}
-% 		\includegraphics{Research_pictures/fig5c.png}
-% 	}
-% 	\caption{Comparison of water flow rate flowing out of the air side at different operating temperatures (a:120A; b:210A; c:300A; vertical water flow; horizontal as temperature; starting point from top to bottom is ordered by flow rate: 1.8/2.0/2.2/2.4)}
-% \end{figure}
+\subfile{Airside_Waterflow_figure_2.tex}
 
 \subsection{Influence of air metering ratio on the water flow out of the cathode and anode}
 
 Compare the water flow out of the air side and the hydrogen side at 120A, 210A, 300A load currents, different coolant inlet temperatures, and different air metering ratios, as shown in Fig \ref{fig:fig6a}. Similar to the impact of working temperature on the water flow out of the air side, under the same load current, the higher the air metering ratio, the more water is carried out of the stack by the unreacted air, which also applies to load current of 210A(fig \ref{fig:fig6b}) and 300A(fig \ref{fig:fig6c}). It should be noted that this growth is not unlimited. After reaching a certain air metering ratio, the growth of the water content in the air side exhaust gas slows down, especially when the load current is small and the working temperature is high. This is because at this time, the water produced by the electrochemical reaction of the fuel cell has been completely carried out of the fuel cell by high-temperature high-speed air. At this time, even if the air metering ratio continues to increase, the water content of the exhaust gas will not continue to increase.
-
-% \begin{figure}
-% 	\label{fig:figure6}
-% 	\subfigure[]{
-% 		\label{fig:fig6a}
-% 		\includegraphics{Research_pictures/fig6a.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig6b}
-% 		\includegraphics{Research_pictures/fig6b.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig6c}
-% 		\includegraphics{Research_pictures/fig6c.png}
-% 	}
-% 	\caption{Comparison of water flow rate flowing out of the air side under different air metering ratios (a:120A; b:210A; c:300A; vertical as water flow; horizontal as air flow rate; starting point from top to bottom is ordered by temperature: 63/65/68/70/73$^{\circ}C$)}
-% \end{figure}
+\subfile{Airside_Waterflow_figure_grouped_by_temperature.tex}
 \par
-For the hydrogen side, similarly, as the air metering ratio increases, the water flow out of the hydrogen side basically continues to decrease. After the above analysis, as the air metering ratio increases, the water stored in the cathode will be taken out of the stack by the high-speed airflow, and the water flow diffused to the hydrogen side through concentration difference becomes less, so relatively speaking, the water collected on the hydrogen side will become less. However, the degree of decline is different. Under low temperature (120A/60$^{\circ}C$, 210A/60$^{\circ}C$, and 300A/63$^{\circ}C$), they all show a relatively gentle decline. As the temperature rises, the water flow out of the hydrogen side is also gradually affected by the air metering ratio
-% \begin{figure}
-% 	\label{fig:figure7}
-% 	\subfigure[]{
-% 		\label{fig:fig7a}
-% 		\includegraphics{Research_pictures/fig7a.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig7b}
-% 		\includegraphics{Research_pictures/fig7b.png}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig7c}
-% 		\includegraphics{Research_pictures/fig7c.png}
-% 	}
-% 	\caption{Comparison of water flow rate flowing out of the hydrogen side under different air metering ratios (a:120A; b:210A; c:300A)}
-% \end{figure}
+For the hydrogen side, similarly, as the air metering ratio increases, the water flow out of the hydrogen side basically continues to decrease. After the above analysis, as the air metering ratio increases, the water stored in the cathode will be taken out of the stack by the high-speed airflow, and the water flow diffused to the hydrogen side through concentration difference becomes less, so relatively speaking, the water collected on the hydrogen side will become less. However, the degree of decline is different. Under low temperature (120A/60$^{\circ}C$, 210A/60$^{\circ}C$, and 300A/63$^{\circ}C$), they all show a relatively gentle decline. As the temperature rises, the water flow out of the hydrogen side is also gradually affected by the air metering ratio.
+
+\subfile{Hydroside_Waterflow_figure_grouped_by_temperature.tex}
 
 \subsection{Effects of operating temperature and air metering ratio on internal water content of fuel cell system}
 According to the working principle of the fuel cell, during the reaction process, water mainly comes from the electrochemical reaction and the water vapor that enters the fuel cell with the reaction gas. Then, a part of the water is discharged from the fuel cell with the exhaust gas after the reaction, and another part of the water stays inside the fuel cell. In this article, the change rate of the water remaining in the fuel cell will be used as the research object to evaluate the water content status inside the fuel cell.
@@ -158,22 +32,17 @@ Although during the reaction process, under the effects of concentration diffusi
 \par
 Using the method described above, the rate of change of the water content inside the fuel cell system under different load currents, working temperatures, and air metering ratios can be calculated. In the process of making the graph, to maintain the integrity of the graph. We use (Load current/Temperature/Coefficient) as the format of test environment description. The data of (210A/55$^{\circ}C$/1.8 ) and (210A/55$^{\circ}C$/2.0) are replaced with (210A/55$^{\circ}C$/2.2) test's data. The obtained results are compared as shown in Fig \ref{fig:fig8a}, Fig \ref{fig8b} and Fig \ref{fig:fig8c}, where positive values indicate an increase in water content (represented in blue), and negative values indicate a decrease in water content (represented in red). For the convenience of subsequent discussions, the blue part is defined as flooding, the red part is defined as drying, and the green part is defined as the normal state.
 
-% \begin{figure}
-% 	\label{fig:figure8}
-% 	\subfigure[]{
-% 		\label{fig:fig8a}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8a.jpg}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig8b}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8b.jpg}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig8c}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8c.jpg}
-% 	}
-% 	\caption{Comparison chart of internal water content of fuel cell system under different conditions (a:120A; b:210A; c:300A)}
-% \end{figure}
+\begin{figure}
+	\label{fig:figure8}
+
+		\label{fig:fig8a}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8a.jpg}
+		\label{fig:fig8b}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8b.jpg}
+		\label{fig:fig8c}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8c.jpg}
+	\caption{Comparison chart of internal water content of fuel cell system under different conditions (a:120A; b:210A; c:300A)}
+\end{figure}
 
 As can be seen from Fig \ref{fig:figure8}, under the same load current, as the working temperature increases and the air metering ratio increases, the rate of change of the water content inside the fuel cell system gradually decreases. When it is 120A/73$^{\circ}C$/2.8, 210A/73$^{\circ}C$/2.4, 300A/73$^{\circ}C$/2.4, the rate of change of the water content inside the fuel cell system reaches the minimum value under this load current. However, the degree of influence of the working temperature and the air metering ratio on the rate of change of the water content inside the fuel cell system is slightly different. When the load current is 120A and 210A, too low working temperature is more likely to cause flooding than too low air metering ratio. For example, at 120A, when the working temperature is 55$^{\circ}C$, even if the air metering ratio reaches 2.8, the fuel cell system is still in a relatively flooded state; and when the working temperature is 73$^{\circ}C$, even if the air metering ratio is only 2.0, the fuel cell system is in a normal state. In a dry state, the degree of influence of working temperature and air metering ratio is not much different. However, when the load current is 310A, the trend is the opposite. Too low working temperature and too low air metering ratio will cause flooding, and too high air metering ratio is more likely to cause drying than too high working temperature.
 
@@ -188,9 +57,9 @@ Table \ref{tab:RegressionAnalysis} shows the result of analysis:
 	\begin{center}
 		\caption{Regression analysis under differnent load current}
 		\label{tab:RegressionAnalysis}
-		\begin{tabular}{l||c|r}
+		\begin{tabular}{l|l|l}
 			\hline
-			\textbf{Load current(A)} & \textbf{Temperature ratio regression coefficient} & \textbf{Air metering ratio regression coefficient} \\
+			\textbf{Load current(A)} & \textbf{\makecell{Temperature ratio\\regression coefficient}} & \textbf{\makecell{Air metering\\ratio regression coefficient}} \\
 			\hline
 			120                       & -0.8469                                           & -0.4145                                            \\
 			210                       & -0.9341                                           & -0.4347                                            \\
@@ -208,22 +77,22 @@ Therefore, to maintain the long-term stable operation of the fuel cell system, a
 	\item A larger air metering ratio and a lower working temperature will cause additional consumption of the auxiliary system, so try to choose working conditions with a low air metering ratio and a high working temperature.
 \end{itemize}
 As shown in Fig \ref{fig:figure9}, 120A/67$^{\circ}C$/2.15, 210A/68$^{\circ}C$/2.15, 300A/70$^{\circ}C$/2.05 are selected as the appropriate operating conditions under each load current.
-% \begin{figure}
-% 	\label{fig:figure9}
-% 	\subfigure[]{
-% 		\label{fig:fig9a}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8a.jpg}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig9b}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8b.jpg}
-% 	}
-% 	\subfigure[]{
-% 		\label{fig:fig9c}
-% 		\includegraphics[width=0.5\textwidth]{Research_pictures/fig8c.jpg}
-% 	}
-% 	\caption{Selection of fuel cell OS operating environment (Working environment surrounded by dots, a:120A; b:210A; c:300A)}
-% \end{figure}
+\begin{figure}
+	\label{fig:figure9}
+	% \subfigure[]{
+		\label{fig:fig9a}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig9a.jpg}
+	% }
+	% \subfigure[]{
+		\label{fig:fig9b}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig9b.jpg}
+	% }
+	% \subfigure[]{
+		\label{fig:fig9c}
+		\includegraphics[width=0.5\textwidth]{Research_pictures/fig9c.jpg}
+	% }
+	\caption{Selection of fuel cell OS operating environment (Working environment surrounded by dots, a:120A; b:210A; c:300A)}
+\end{figure}
 Next, compare the rate of change of the water content inside the fuel cell system under different load currents.
 
 \begin{table}
