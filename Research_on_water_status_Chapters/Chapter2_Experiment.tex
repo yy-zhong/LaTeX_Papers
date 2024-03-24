@@ -1,7 +1,14 @@
 \section{Experiment}
-To verify the reliability of the water balance model for high-power fuel cell systems, it is necessary to record the water-containing state of the high-power fuel cell system when it reaches water balance under different operating conditions. Therefore, the experimental conditions should meet the following three points:(1) : The selected operating parameters should be within the normal operating range of the fuel cell system to avoid other faults in the fuel cell system other than water content faults (such as insufficient supply of reaction gas, air compressor surge, proportional valve failure, etc.), (2)In order to study the phenomena when the fuel cell system has a water content fault, the designed experiment needs to reflect more obvious phenomena under dry and flooded conditions, (3) The steady-state operation time should be long enough to ensure that the water content inside the fuel cell is in dynamic balance during this period, avoiding the impact of dynamic characteristics on the experimental results.
+To verify the reliability of the water balance model for high-power fuel cell systems, it is necessary to record the water-containing state of the high-power fuel cell system when it reaches water balance under different operating conditions. Therefore, the experimental conditions should meet the following three points:
+\begin{itemize}
+\item The selected operating parameters should be within the normal operating range of the fuel cell system to avoid other faults in the fuel cell system other than water content faults (such as insufficient supply of reaction gas, air compressor surge, proportional valve failure, etc.)
+\item In order to study the phenomena when the fuel cell system has a water content fault, the designed experiment needs to reflect more obvious phenomena under dry and flooded conditions
+\item The steady-state operation time should be long enough to ensure that the water content inside the fuel cell is in dynamic balance during this period, avoiding the impact of dynamic characteristics on the experimental results.
+\end{itemize}
+% 为了验证高功率燃料电池系统水平衡模型的可靠性，需要记录高功率燃料电池系统在不同工况下达到水平衡时的含水状态。因此，实验条件应满足以下三点：（1）：所选运行参数应在燃料电池系统正常运行范围内，避免燃料电池系统出现除含水量故障外的其他故障（如含水量不足）。反应气体供应、空压机喘振、比例阀故障等），（2）为了研究燃料电池系统出现含水故障时的现象，设计的实验需要反映干燥和浸水下更明显的现象 (3) 稳态运行时间应足够长，以保证在此期间燃料电池内部的含水量处于动态平衡，避免动态特性对实验结果的影响。
 \subsection{Experiment Design}
-The literature indicates that the factors that have the greatest impact on the water content inside the fuel cell are the air metering ratio, working temperature, and load current \cite{legrosFirstResultsPEMFC2011}. Since the temperature inside the stack cannot be measured during operation, the inlet temperature of the coolant is used as the working temperature in this paper, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in \ref{tab:WaterStateExperimentalParameterTable}.
+The literature indicates factors with greatest impact on water content inside fuel cell are air metering ratio, working temperature, and load current \cite{legrosFirstResultsPEMFC2011}. Given the temperature inside stack cannot be measured during operation, the inlet temperature of coolant is treated as working temperature in this research, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in \ref{tab:WaterStateExperimentalParameterTable}.
+% 文献表明，对燃料电池内部含水量影响最大的因素是空气计量比、工作温度和负载电流\cite{legrosFirstResultsPEMFC2011}。由于运行时无法测量电堆内部温度，因此本文采用冷却剂入口温度作为工作温度，下文中的工作温度均指冷却剂入口温度。根据系统方推荐的运行工况，设计了三因素五级含水量实验。实验的参数显示在\ref{tab:WaterStateExperimentalParameterTable}中。
 \begin{table}
 	\centering
 	\begin{center}
@@ -20,11 +27,12 @@ The literature indicates that the factors that have the greatest impact on the w
 \end{table}
 
 Literatures\cite{wuDiagnosticToolsPEM2008} indicates that the time required for the fuel cell system to reach water balance is generally a few seconds to ten minutes. Therefore, each test point ran for 20 minutes, and it was assumed that the fuel cell was in the process of establishing water balance within the first 15 minutes, and no data was recorded for this process, and the data obtained in the last 5 minutes was recorded. During the test, if a single cell voltage is too low or other faults cause the fuel cell system to shut down, the data of this operating point will be removed.
+% 文献\cite{wuDiagnosticToolsPEM2008}表明，燃料电池系统达到水平衡所需的时间一般为几秒到十分钟。因此，每个测试点运行 20 分钟，并假设燃料电池在前 15 分钟内处于建立水平衡的过程，并且该过程没有记录数据，最后 5 分钟获得的数据 被记录。测试过程中，如果单节电池电压过低或其他故障导致燃料电池系统关闭，则该工作点的数据将被清除。
 
-
-% 2.2章
+% 2.2 章
 \subsection{Test platform introduction}
-The high-power fuel cell system used in this article is shown in Fig 2, manufactured by AT\&M Environmental Engineering Technology Co. The rated net output power of the fuel cell system is 100kW, the stack is composed of 410 single cells. High-pressure dry hydrogen gas enters the anode of the reaction stack after being depressurized by the solenoid valve and proportional valve. The liquid water in the residual hydrogen is separated by the gas-water separation device and intermittently discharged through the drain valve.
+The high-power fuel cell system used in this article is shown in Fig \ref{fig:PowerSystemDiagram}, manufactured by AT\&M Environmental Engineering Technology Co. With rated net output power of 100kW, the stack is composed of 410 single cells. High-pressure dry hydrogen gas enters the anode of the reaction stack after being depressurized by the solenoid valve and proportional valve. The liquid water in the residual hydrogen is separated by the gas-water separation device and intermittently discharged through the drain valve.
+% 本文采用的大功率燃料电池系统如图 2 所示，由 AT&M 环境工程技术有限公司生产。该燃料电池系统的额定净输出功率为 100kW，电堆由 410 块单电池组成。高压干燥氢气经电磁阀和比例阀减压后进入反应堆阳极。残余氢气中的液态水被气水分离装置分离，并通过排水阀间歇排放。
 \begin{figure}[h]
 	\centering
 	\label{fig:PowerSystemDiagram}
@@ -33,26 +41,28 @@ The high-power fuel cell system used in this article is shown in Fig 2, manufact
 \end{figure}
 
 For the above fuel cell system, the water balance model can be represented as
+% 对于上述燃料电池系统，水平衡模型可表示为
 \begin{equation} \label{waterBalanceModel}
 	\frac{d m_{w,s y s}}{d t}=Q_{v,i n,s y s}+Q_{w,g e n,c a}-Q_{w,o u t,c a}-Q_{w,o u t,a n}
 \end{equation}
 
 In formula (\ref{waterBalanceModel}), epresents the water
 \begin{itemize}
-	\item $m_(w,sys)$ represents the water content inside the fuel cell system, in grams.
-	\item $Q_(v,in,sys)$ represents the flow rate of water vapor entering the fuel cell system, in g/s;
-	\item $Q_(w,gen)$ represents the water flow generated by the electrochemical reaction, in g/s;
-	\item $Q_(w,out,ca)$ represents the water flow out of the system from the air subsystem, in g/s;
-	\item $Q_(w,out,an)$ represents the water flow out of the system from the hydrogen subsystem, in g/s;
+	\item $m_(w,sys)$ represents the water content inside the fuel cell system, in grams; %代表燃料电池系统内的水含量，以克为单位。
+	\item $Q_(v,in,sys)$ represents the flow rate of water vapor entering the fuel cell system, in g/s; %表示进入燃料电池系统的水蒸气的流量，单位为 g/s
+	\item $Q_(w,gen)$ represents the water flow generated by the electrochemical reaction, in g/s; %表示电化学反应产生的水流量，单位为 g/s
+	\item $Q_(w,out,ca)$ represents the water flow out of the system from the air subsystem, in g/s; %表示从空气子系统流出系统的水流量，单位为 g/s；
+	\item $Q_(w,out,an)$ represents the water flow out of the system from the hydrogen subsystem, in g/s; %表示从氢气子系统流出系统的水流量，单位为 g/s
 \end{itemize}
-Taking the fuel cell system during steady-state operation as the research object,
-the change in the water content of the auxiliary system of the fuel cell system can be ignored, that is,
+Taking the fuel cell system during steady-state operation as the research object, the change in the water content of the auxiliary system of the fuel cell system can be ignored, that is,
+% 以稳态运行时的燃料电池系统为研究对象，燃料电池系统辅助系统含水量的变化可以忽略不计，即
 \begin{equation}\label{changeInWaterContent}
 	\frac{d m_{w,s t k}}{d t}=\frac{d m_{w,s y s}}{d t}
 \end{equation}
 Each part of the equation can be calculated by:
 \subsection*{Water flow into the system}
 Since the hydrogen entering the system is high-pressure hydrogen with a purity of 99.99\%, water vapor mainly enters the system with the air. By recording the temperature, humidity, pressure of the environment during the reaction process, and the air flow entering the system, the water flow entering the system can be calculated.
+% 由于进入系统的氢气是纯度为 99.99% 的高压氢气，因此水蒸气主要随空气进入系统。通过记录反应过程中环境的温度、湿度、压力以及进入系统的空气流量，可以计算出进入系统的水流量。
 \begin{equation}\label{waterFlowEnteringSystemCalculation}
 	Q_{v,i n,s y s}={\frac{Q_{a i r;i n,s y s}\cdot P_{v a m b} \cdot M_{v}}{M_{a} \cdot P_{a m b}}}={\frac{Q_{a i r;i n,s y s}\cdot (P_{a m b} - P_{s a t} \ast RH)\cdot M_{v}}{M_{a} \cdot P_{a m b}}}
 \end{equation}
