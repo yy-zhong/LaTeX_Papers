@@ -1,8 +1,8 @@
 \begin{figure}[ht]
-	\label{figure4}
+	
 	\centering
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_120A_ratio}
+		
 		\begin{axis}[
 				title={Hydrogen side waterflow at 120A load current},
 				xlabel={Airflow Ratio},
@@ -27,9 +27,10 @@
 			\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/hydrogenside_waterflow_120A_in_temperature.csv};
 			\addlegendentry{Temperature 73}
 		\end{axis}
+		\label{fig:airside_waterflow_120A_ratio_hydro}
 	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_210A_ratio}
+		
 		\begin{axis}[
 				title={Hydrogen side waterflow at 210A load current},
 				xlabel={Airflow Ratio},
@@ -54,9 +55,10 @@
 			\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/hydrogenside_waterflow_210A_in_temperature.csv};
 			\addlegendentry{Temperature 73}
 		\end{axis}
+		\label{fig:airside_waterflow_210A_ratio}
 	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_300A_ratio}
+		
 		\begin{axis}[
 				title={Hydrogen side waterflow at 300A load current},
 				xlabel={Airflow Ratio},
@@ -81,6 +83,8 @@
 			\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 			\addlegendentry{Temperature 73}
 		\end{axis}
+		\label{fig:airside_waterflow_300A_ratio}
 	\end{tikzpicture}
 	\caption{Comparison of water flow rate flowing out of the air side under different air metering ratios (a:120A; b:210A; c:300A; vertical as water flow; horizontal as air flow rate; starting point from top to bottom is ordered by temperature: 63/65/68/70/73℃)}
+	\label{airside_waterflow}
 \end{figure}

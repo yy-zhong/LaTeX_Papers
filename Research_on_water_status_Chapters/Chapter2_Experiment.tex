@@ -1,19 +1,24 @@
 \section{Experiment}
 To verify the reliability of the water balance model for high-power fuel cell systems, it is necessary to record the water-containing state of the high-power fuel cell system when it reaches water balance under different operating conditions. Therefore, the experimental conditions should meet the following three points:
+% 为了验证高功率燃料电池系统水平衡模型的可靠性，需要记录高功率燃料电池系统在不同工况下达到水平衡时的含水状态。 因此，实验条件应满足以下三点：
 \begin{itemize}
 \item The selected operating parameters should be within the normal operating range of the fuel cell system to avoid other faults in the fuel cell system other than water content faults (such as insufficient supply of reaction gas, air compressor surge, proportional valve failure, etc.)
+% 所选运行参数应在燃料电池系统正常运行范围内，避免燃料电池系统出现含水故障以外的其他故障（如反应气体供应不足、空压机喘振、比例阀故障等）。
 \item In order to study the phenomena when the fuel cell system has a water content fault, the designed experiment needs to reflect more obvious phenomena under dry and flooded conditions
+% 为了研究燃料电池系统出现含水故障时的现象，设计的实验需要反映干燥和淹水条件下更明显的现象
 \item The steady-state operation time should be long enough to ensure that the water content inside the fuel cell is in dynamic balance during this period, avoiding the impact of dynamic characteristics on the experimental results.
+% 稳态运行时间应足够长，以保证在此期间燃料电池内部的含水量处于动态平衡，避免动态特性对实验结果的影响。
 \end{itemize}
 % 为了验证高功率燃料电池系统水平衡模型的可靠性，需要记录高功率燃料电池系统在不同工况下达到水平衡时的含水状态。因此，实验条件应满足以下三点：（1）：所选运行参数应在燃料电池系统正常运行范围内，避免燃料电池系统出现除含水量故障外的其他故障（如含水量不足）。反应气体供应、空压机喘振、比例阀故障等），（2）为了研究燃料电池系统出现含水故障时的现象，设计的实验需要反映干燥和浸水下更明显的现象 (3) 稳态运行时间应足够长，以保证在此期间燃料电池内部的含水量处于动态平衡，避免动态特性对实验结果的影响。
 \subsection{Experiment Design}
-The literature indicates factors with greatest impact on water content inside fuel cell are air metering ratio, working temperature, and load current \cite{legrosFirstResultsPEMFC2011}. Given the temperature inside stack cannot be measured during operation, the inlet temperature of coolant is treated as working temperature in this research, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in \ref{tab:WaterStateExperimentalParameterTable}.
+The literature indicates factors with greatest impact on water content inside fuel cell are air metering ratio, working temperature, and load current \cite{legrosFirstResultsPEMFC2011}. Given the temperature inside stack cannot be measured during operation, the inlet temperature of coolant is treated as working temperature in this research, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in Table \ref{tab:WaterStateExperimentalParameterTable}.
 % 文献表明，对燃料电池内部含水量影响最大的因素是空气计量比、工作温度和负载电流\cite{legrosFirstResultsPEMFC2011}。由于运行时无法测量电堆内部温度，因此本文采用冷却剂入口温度作为工作温度，下文中的工作温度均指冷却剂入口温度。根据系统方推荐的运行工况，设计了三因素五级含水量实验。实验的参数显示在\ref{tab:WaterStateExperimentalParameterTable}中。
 \begin{table}
 	\centering
+	
 	\begin{center}
 		\caption{Water state experimental parameter table}
-		\label{tab:WaterStateExperimentalParameterTable}
+		\label{tab:WaterStateExperimentalParameterTable}	
 		\begin{tabular}{l|c|r}
 			\hline
 			\textbf{\makecell{Load current(A) / \\currency density($A·cm^{-2}$)}}   & \textbf{Working temperature($^{\circ}C$)} & \textbf{Air metering ratio} \\
@@ -24,6 +29,7 @@ The literature indicates factors with greatest impact on water content inside fu
 			\hline
 		\end{tabular}
 	\end{center}
+	
 \end{table}
 
 Literatures\cite{wuDiagnosticToolsPEM2008} indicates that the time required for the fuel cell system to reach water balance is generally a few seconds to ten minutes. Therefore, each test point ran for 20 minutes, and it was assumed that the fuel cell was in the process of establishing water balance within the first 15 minutes, and no data was recorded for this process, and the data obtained in the last 5 minutes was recorded. During the test, if a single cell voltage is too low or other faults cause the fuel cell system to shut down, the data of this operating point will be removed.
@@ -35,9 +41,10 @@ The high-power fuel cell system used in this article is shown in Fig \ref{fig:Po
 % 本文采用的大功率燃料电池系统如图 2 所示，由 AT&M 环境工程技术有限公司生产。该燃料电池系统的额定净输出功率为 100kW，电堆由 410 块单电池组成。高压干燥氢气经电磁阀和比例阀减压后进入反应堆阳极。残余氢气中的液态水被气水分离装置分离，并通过排水阀间歇排放。
 \begin{figure}[h]
 	\centering
-	\label{fig:PowerSystemDiagram}
+	
 	\includegraphics[scale=0.4]{Research_pictures/picture2.png}
 	\caption[short]{power system diagram}
+	\label{fig:PowerSystemDiagram}
 \end{figure}
 
 For the above fuel cell system, the water balance model can be represented as
@@ -94,14 +101,18 @@ The water flow produced by electrochemical reaction can be presented as formula 
 \end{itemize}
 \subsection*{The water flow out of the system from the air side and the hydrogen side}
 To measure the water flow out of the system from the air and hydrogen sides, this article has designed an exhaust water content detection device centered on condensation.
+% 为了测量从空气侧和氢气侧流出系统的水流量，本文设计了一种以冷凝为核心的排气含水量检测装置。
 \begin{figure}
 	\centering
-	\label{fig:water_detection_device_diagram}
+	
 	\includegraphics[scale=0.6]{Research_pictures/picture3.png}
 	\caption[short]{Schematic diagram of exhaust gas water content detection device}
+	\label{fig:water_detection_device_diagram}
 \end{figure}
 The exhaust water content detection device on the air side is composed of a heat exchanger, a water separator, a temperature sensor, and a water collection device with a liquid level sensor. The basic principle is to condense the high-temperature supersaturated exhaust gas on the air side, and then separate the liquid water inside from the exhaust gas through the water separator, thus obtaining saturated low-temperature exhaust gas and liquid water. Collect the separated liquid water and collect the liquid level with a liquid level sensor.
+% 空气侧排气含水量检测装置由热交换器、水分离器、温度传感器和带有液位传感器的集水装置组成。 其基本原理是将高温过饱和废气在空气侧冷凝，然后通过水分离器将内部的液态水与废气分离，从而获得饱和低温废气和液态水。 收集分离出的液态水，并用液位传感器采集液位。
 Therefore, the water flow out of the system from the air side is composed of two parts: the liquid water collected in the air side collection device and the water vapor carried in the saturated steam after water vapor separation, that is,
+% 因此，从空气侧流出系统的水由两部分组成：空气侧收集装置收集的液态水和水蒸气分离后的饱和蒸汽中携带的水蒸气，即
 \begin{equation}
 	\label{waterFlowOutOfTheSystem}
 	Q_{w,out,ca}={\frac{d m_{w,cacollect}}{d t}}+{\frac{Q_{air,out,sys} \cdot p_{v,sat}\cdot M_{v}}{M_{a} \cdot P_{a m b}}}
@@ -117,6 +128,7 @@ The $Q_{air,out,sys}$ is represented as below:
 	Q_{air,outsys}=Q_{air,in,sys}-Q_{o,recat,ca}+Q_{v,gen,ca}-{\frac{dm_{w,cacolect}}{dt}}
 \end{equation}
 Since the hydrogen return circuit of the system is equipped with a water separator, the water content detection device on the hydrogen side mainly collects liquid water and a small amount of hydrogen, with less gaseous water, which does not significantly affect the experimental results. Therefore, the exhaust water content detection device on the hydrogen side only has a water collection device with a liquid level sensor, which is used to record the water flow discharged from the hydrogen side.
+% 由于系统氢气回流回路设有水分离器，氢气侧水分检测装置主要收集液态水和少量氢气，气态水较少，对实验结果没有明显影响。 因此氢气侧排气含水量检测装置只有一个带有液位传感器的集水装置，用于记录氢气侧排出的水流量。
 \begin{equation}
 	Q_{w,out,an}={\frac{dm_{w,ancollect}}{dt}}
 \end{equation}
@@ -124,9 +136,13 @@ $m_{w,ancollect}$ represents the mass of the liquid collected by the exhaust wat
 
 \subsection*{Test methods}
 In sequence, turn on host computer, system controller, electronic load, auxiliary devices, and impedance testing system; Turn on the water pump, solenoid valve, proportional valve, back pressure valve, air compressor, drain valve, and hydrogen circulation pump in sequence, setting the anode inlet gas pressure 10kPa higher than the cathode inlet gas pressure ($\Delta p=20kPa$).
+% 依次打开主机、系统控制器、电子负载、辅助设备、阻抗测试系统； 依次打开水泵、电磁阀、比例阀、背压阀、空压机、排水阀、氢气循环泵，设置阳极入口气体压力比阴极入口气体压力高10kPa（$\Delta p=20kPa $）。
 \par
 Gradually load the system to 120A, adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air flow rate reaches the air metering coefficient of 2.8 corresponding to the target current, gradually raise the working temperature to $55\pm1^{\circ}C$, and start the temperature closed-loop control program to maintain this temperature; After the working temperature is stable at $55\pm1^{\circ}C$, start timing and run for a total of 15 minutes; Adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air metering ratio gradually decreases in the range of 2 \~ 2.8 with a step size of 0.2; Raise the working temperature to $60\pm1^{\circ}C$, $65\pm1^{\circ}C$, $70\pm1^{\circ}C$ , $73\pm1^{\circ}C$, repeat the testing phase and record the experimental data.
+% 逐渐将系统加载至120A，调节空压机的转速和背压阀的开启角度，使空气流量达到目标电流对应的空气计量系数2.8，逐渐将工作温度升至$55 \pm1^{\circ}C$，并启动温度闭环控制程序，维持该温度； 工作温度稳定在$55\pm1^{\circ}C$后，开始计时，共运行15分钟； 调节空压机转速和背压阀开启角度，使空气计量比在2~2.8范围内逐渐减小，步长为0.2； 将工作温度升高至$60\pm1^{\circ}C$、$65\pm1^{\circ}C$、$70\pm1^{\circ}C$、$73\pm1^{\circ}C$，重复 测试阶段并记录实验数据。
 \par
 Load up to 210A, 300A, repeat all recording steps, until all operating points water content detection experiments are completed.
+% 加载至210A、300A，重复所有记录步骤，直至所有工作点含水量检测实验完成。
 \par
-Gradually reduce the load to 0A, use nitrogen to purge the circuit, turn off the machine, and power down in sequence.
+Gradually reduce the load to 0A, purging circuit with nitrogen, turn off the machine, and power down in sequence.
+% 逐渐将负载降至0A，用氮气吹扫电路，关闭机器，依次断电。

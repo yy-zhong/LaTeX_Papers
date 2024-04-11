@@ -1,6 +1,6 @@
 \begin{tikzpicture}
     \centering
-    \label{fig:hydrogenside_waterflow_120A_ratio}
+    
 	\begin{axis}[
 			title={Hydrogen side waterflow at 120A load current},
 			xlabel={Working Temperature/$^{\circ}C$},
@@ -26,12 +26,13 @@
 		\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/hydrogenside_waterflow_120A_in_ratio.csv};
 		\addlegendentry{Ratio 2.8}
 	\end{axis}
+	\label{fig:hydrogenside_waterflow_120A_ratio}
 \end{tikzpicture}
 
 
 \begin{tikzpicture}
     \centering
-    \label{fig:hydrogenside_waterflow_210A_ratio}
+    
 	\begin{axis}[
 			title={Hydrogen side waterflow at 210A load current},
 			xlabel={Working Temperature/$^{\circ}C$},
@@ -56,11 +57,12 @@
 		\addlegendentry{Ratio 2.4}
 
 	\end{axis}
+	\label{fig:hydrogenside_waterflow_210A_ratio}
 \end{tikzpicture}
 
 \begin{tikzpicture}
     \centering
-    \label{fig:hydrogenside_waterflow_300A_ratio}
+    
 	\begin{axis}[
 			title={Hydrogen side waterflow at 300A load current},
 			xlabel={Working Temperature/$^{\circ}C$},
@@ -86,4 +88,5 @@
 		\addlegendentry{Ratio 2.4}
 
 	\end{axis}
+	\label{fig:hydrogenside_waterflow_300A_ratio}
 \end{tikzpicture}

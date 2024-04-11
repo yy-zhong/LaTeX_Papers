@@ -1,80 +1,89 @@
 \begin{figure}[ht]
-	\label{figure4}
 	\centering
-	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_120A_ratio}
-		\begin{axis}[
-				title={Airside waterflow at 120A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-				xmin=50, xmax=75,
-				ymin=2.5, ymax=5.5,
-				ytick distance = 0.5,
-				legend pos=north west,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-	
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.6}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
-			\addlegendentry{Ratio 2.8}
-		\end{axis}
-	\end{tikzpicture}
-	\begin{tikzpicture}[scale=0.6]
-		\label{fig:airside_waterflow_210A_ratio}
-		\begin{axis}[        
-				title={Airside waterflow at 210A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-				xmin=50, xmax=75,
-				ymin=4, ymax=8.0,
-				legend pos=north west,
-				ytick distance = 0.5,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 1.8}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-		\end{axis}
-	\end{tikzpicture}
-	\begin{tikzpicture}[scale=0.6]
-		\centering
-		\label{fig:airside_waterflow_300A_ratio}
-		\begin{axis}[        
-				title={Airside waterflow at 300A load current},
-				xlabel={Working Temperature/$^{\circ}C$},
-				ylabel={Airside Water flow/$g \cdot s^{-1}$},
-				xmin=60, xmax=75,
-				ymin=7, ymax=10.5,
-				legend pos=north west,
-				ytick distance = 0.5,
-				ymajorgrids=true,
-				grid style=dashed,
-			]
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 1.8}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.0}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.2}
-			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
-			\addlegendentry{Ratio 2.4}
-		\end{axis}
-	\end{tikzpicture}
+	\subfloat[\label{fig:airside_waterflow_120A_ratio}]{
+		\begin{tikzpicture}[scale=0.6]
+		
+			\begin{axis}[
+					title={Airside waterflow at 120A load current},
+					xlabel={Working Temperature/$^{\circ}C$},
+					ylabel={Airside Water Flow/$g \cdot s^{-1}$},
+					xmin=50, xmax=75,
+					ymin=2.5, ymax=5.5,
+					ytick distance = 0.5,
+					legend pos=north west,
+					ymajorgrids=true,
+					grid style=dashed,
+				]
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addlegendentry{Ratio 2.0}
+		
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addlegendentry{Ratio 2.2}
+		
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addlegendentry{Ratio 2.4}
+		
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addlegendentry{Ratio 2.6}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addlegendentry{Ratio 2.8}
+			\end{axis}
+		\end{tikzpicture}
+	}
+	\subfloat[\label{fig:airside_waterflow_210A_ratio}]{
+		\begin{tikzpicture}[scale=0.6]
+		
+			\begin{axis}[        
+					title={Airside waterflow at 210A load current},
+					xlabel={Working Temperature/$^{\circ}C$},
+					ylabel={Airside Water Flow/$g \cdot s^{-1}$},
+					xmin=50, xmax=75,
+					ymin=4, ymax=8.0,
+					legend pos=north west,
+					ytick distance = 0.5,
+					ymajorgrids=true,
+					grid style=dashed,
+				]
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addlegendentry{Ratio 1.8}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addlegendentry{Ratio 2.0}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addlegendentry{Ratio 2.2}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addlegendentry{Ratio 2.4}
+			\end{axis}
+			\label{fig:airside_waterflow_210A_ratio}
+		\end{tikzpicture}
+	}
+	\\
+	\subfloat[\label{fig:airside_waterflow_300A_ratio}]{
+		\begin{tikzpicture}[scale=0.6]
+			\centering
+			
+			\begin{axis}[        
+					title={Airside waterflow at 300A load current},
+					xlabel={Working Temperature/$^{\circ}C$},
+					ylabel={Airside Water flow/$g \cdot s^{-1}$},
+					xmin=60, xmax=75,
+					ymin=7, ymax=10.5,
+					legend pos=north west,
+					ytick distance = 0.5,
+					ymajorgrids=true,
+					grid style=dashed,
+				]
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addlegendentry{Ratio 1.8}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addlegendentry{Ratio 2.0}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addlegendentry{Ratio 2.2}
+				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addlegendentry{Ratio 2.4}
+			\end{axis}
+			
+		\end{tikzpicture}
+	}
 	\caption{Comparison of water flow rate flowing out of the air side at different operating temperatures (a:120A; b:210A; c:300A; vertical water flow; horizontal as temperature; starting point from top to bottom is ordered by flow rate: 1.8/2.0/2.2/2.4)}
+	\label{figure4}
 \end{figure}

@@ -1,7 +1,6 @@
 \begin{figure}[ht]
 	\centering
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:fig5a}
 		\begin{axis}[
 				title={Hydrogen side waterflow at 120A load current},
 				xlabel={Working Temperature/$^{\circ}C$},
@@ -27,9 +26,10 @@
 			\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/hydrogenside_waterflow_120A_in_ratio.csv};
 			\addlegendentry{Ratio 2.8}
 		\end{axis}
+		\label{fig:fig5a}
 	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:fig5b}
+		
 		\begin{axis}[
 				title={Hydrogen side waterflow at 210A load current},
 				xlabel={Working Temperature/$^{\circ}C$},
@@ -54,9 +54,10 @@
 			\addlegendentry{Ratio 2.4}
 	
 		\end{axis}
+		\label{fig:fig5b}
 	\end{tikzpicture}
 	\begin{tikzpicture}[scale=0.6]
-		\label{fig:fig5c}
+		
 		\begin{axis}[
 				title={Hydrogen side waterflow at 300A load current},
 				xlabel={Working Temperature/$^{\circ}C$},
@@ -82,6 +83,8 @@
 			\addlegendentry{Ratio 2.4}
 	
 		\end{axis}
+		\label{fig:fig5c}
 	\end{tikzpicture}
 	\caption{Comparison of water flow rate flowing out of the air side at different operating temperatures (a:120A; b:210A; c:300A; vertical water flow; horizontal as temperature; starting point from top to bottom is ordered by flow rate: 1.8/2.0/2.2/2.4)}
+	\label{fig:fig5}
 \end{figure}
