@@ -51,17 +51,19 @@ Li et al.\cite{liReviewWaterFlooding2008} showed that at low current densities, 
 The pressure drop between the inlet and outlet of the fuel cell is mainly caused by the friction between the flowing medium and the internal flow channel of the cel\cite{wuDiagnosticToolsPEM2008}. The pressure drop between the two ends increases with the increase of liquid water content, so the pressure drop can well reflect the degree of water flooding in the stack. The indicators include: pressure drop, pressure drop residual, pressure drop frequency, two-phase flow Multiplier coefficient, etc., and the, diagnosis is carried out through the above indicators by qualitative analysis, statistical analysis, artificial intelligence analysis, etc.\cite{liNovelApproachDetermine2017}
 % 燃料电池入口和出口之间的压降主要是由流动介质与 cel\cite{wuDiagnosticToolsPEM2008}内部流道之间的摩擦引起的。两端之间的压降随着液态水含量的增加而增大，因此压降可以很好地反映烟囱内水淹的程度。指标包括：压降、压降残余、压降频率、两相流乘数系数等，通过定性分析、统计分析、人工智能分析等，通过上述指标进行诊断。引用{liNovelApproachDetermine2017}
 \par
-\begin{figure}[h]
-	\centering
+% \begin{figure}[h]
+% 	\centering
 
-	\includegraphics{Research_pictures/Fig1.jpg}
-	% \includesvg{Research_pictures/1.svg}
-	% \includegraphics{Research_pictures/1.svg}
-	\caption[short]{The change of cathode and anode voltage drop with time during flooding process}
-	\label{fig:figure1}
-\end{figure}
-The detection methods based on electrochemical signals mainly include electrochemical impedance spectroscopy, current interruption method, and cyclic voltammetry, etc. Among them, electrochemical impedance spectroscopy is the most common hydration state detection method because it can distinguish different electrochemical processes and can be tested online \cite{yousfisteinerDiagnosisPolymerElectrolyte2011,chenOperationCharacteristicsCarbon2015}. The Fig \ref{fig:figure1} shows the difference in fuel cell impedance spectra under different air humidity conditions. As the air humidity decreases, the value of the high-frequency impedance segment (i.e., the intercept of the impedance spectrum with the real axis) gradually increases, the impedance spectrum moves to the right, and the radius of the low-frequency arc segment also gradually increases \cite{hussainiVisualizationQuantificationCathode2009,mocoteguy_study_2020,laribi_impedance_2016}, which can be used as an indicator of the hydration state of the fuel cell.
-% 基于电化学信号的检测方法主要有电化学阻抗谱、电流中断法、循环伏安法等。其中，电化学阻抗谱是最常见的水化状态检测方法，因为它可以区分不同的电化学过程，并且可以在线测试\ 引用{yousfisteinerDiagnosisPolymerElectrolyte2011，chenOperationCharacteristicsCarbon2015}。图\ref{fig:figure1}显示了不同空气湿度条件下燃料电池阻抗谱的差异。随着空气湿度的降低，高频阻抗段的值（即阻抗谱与实轴的截距）逐渐增大，阻抗谱向右移动，低频圆弧段的半径增大 也逐渐增加\cite{hussainiVisualizationQuantificationCathode2009}，可以作为燃料电池水合状态的指标。
+% 	\includegraphics{Research_pictures/Fig1.jpg}
+% 	\caption[short]{The change of cathode and anode voltage drop with time during flooding process}
+% 	\label{fig:figure1}
+% \end{figure}
+The detection methods based on electrochemical signals mainly include electrochemical impedance spectroscopy, current interruption method, and cyclic voltammetry, etc. Among them, electrochemical impedance spectroscopy is the most common hydration state detection method because it can distinguish different electrochemical processes and can be tested online \cite{yousfisteinerDiagnosisPolymerElectrolyte2011,chenOperationCharacteristicsCarbon2015}.
+% % 基于电化学信号的检测方法主要有电化学阻抗谱、电流中断法、循环伏安法等。其中，电化学阻抗谱是最常见的水化状态检测方法，因为它可以区分不同的电化学过程，并且可以在线测试\ 引用{yousfisteinerDiagnosisPolymerElectrolyte2011，chenOperationCharacteristicsCarbon2015}。
+% The Fig \ref{fig:figure1} shows the difference in fuel cell impedance spectra under different air humidity conditions.
+% 图\ref{fig:figure1}显示了不同空气湿度条件下燃料电池阻抗谱的差异。
+As the air humidity decreases, the value of the high-frequency impedance segment (i.e., the intercept of the impedance spectrum with the real axis) gradually increases, the impedance spectrum moves to the right, and the radius of the low-frequency arc segment also gradually increases \cite{hussainiVisualizationQuantificationCathode2009,mocoteguy_study_2020,laribi_impedance_2016}, which can be used as an indicator of the hydration state of the fuel cell.
+% 随着空气湿度的降低，高频阻抗段的值（即阻抗谱与实轴的截距）逐渐增大，阻抗谱向右移动，低频圆弧段的半径增大 也逐渐增加\cite{hussainiVisualizationQuantificationCathode2009}，可以作为燃料电池水合状态的指标。
 \par
 When analyzing the relationship between impedance spectra and the internal hydration state of fuel cells, equivalent circuit models are often introduced. The model generally includes resistors, capacitors, inductors, and Warburg elements\cite{tangRecentProgressUse2020}. The model is capable of quantitatively analyzing the electrochemical process.  The key to this method is the establishment of equivalent models and parameter identification. Fouquet et al.[25] extended the standard capacitor to a constant phase element, proving that the three resistance values of the model are related to the relative humidity of the air supply. Zhang et al.[26] used a neural network method to complete parameter identification, and the predicted Nyquist plot almost completely coincides with the measured value, and by directly predicting the parameters of the equivalent circuit, they detailed the degree of influence of different processes on fuel cell performance. BMW proposed a method for online monitoring of impedance, which requires collecting five frequency points, divided into three groups to fit the Randles circuit, obtaining ohmic impedance, polarization resistance and double layer capacitance\cite{fouquetModelBasedPEM2006}.
 % 在分析阻抗谱与燃料电池内部水合状态之间的关系时，常常引入等效电路模型。该模型通常包括电阻器、电容器、电感器和 Warburg 元件\cite{tangRecentProgressUse2020}。该模型能够定量分析电化学过程。该方法的关键是等效模型的建立和参数辨识。Fouquet 等人 [25] 将标准电容器扩展为恒相位元件，证明模型的三个电阻值与送风相对湿度有关。张等 [26] 他们利用神经网络方法完成参数辨识，预测的奈奎斯特图与测量值几乎完全吻合，并通过直接预测等效电路的参数，详细说明了不同工艺对燃料电池性能的影响程度。BMW 提出了一种在线监测阻抗的方法，需要采集 5 个频点，分成 3 组来拟合 Randles 电路，得到欧姆阻抗、极化电阻和双层电容\cite{fouquetModelBasedPEM2006}。
