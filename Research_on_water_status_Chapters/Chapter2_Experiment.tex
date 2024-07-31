@@ -2,16 +2,15 @@
 To verify the reliability of the water balance model for high-power fuel cell systems, it is necessary to record the water-containing state of the high-power fuel cell system when it reaches water balance under different operating conditions. Therefore, the experimental conditions should meet the following three points:
 % 为了验证高功率燃料电池系统水平衡模型的可靠性，需要记录高功率燃料电池系统在不同工况下达到水平衡时的含水状态。 因此，实验条件应满足以下三点：
 \begin{itemize}
-	\item The selected operating parameters should be within the normal operating range of the fuel cell system to avoid other faults in the fuel cell system other than water content faults (such as insufficient supply of reaction gas, air compressor surge, proportional valve failure, etc.)
+	\item The selected operating parameters within normal operating range of the fuel cell system, reducing effects by faults in FC(Fuel Cell) system other than water content faults (gas supply insufficiency, air compressor surge, proportional valve failure, etc.)
 	      % 所选运行参数应在燃料电池系统正常运行范围内，避免燃料电池系统出现含水故障以外的其他故障（如反应气体供应不足、空压机喘振、比例阀故障等）。
-	\item In order to study the phenomena when the fuel cell system has a water content fault, the designed experiment needs to reflect more obvious phenomena under dry and flooded conditions
+	\item By designing experiments that manifest more pronounced phenomena under both dry and flooded conditions, the study would investigates the effects of water content faults in fuel cell systems.
 	      % 为了研究燃料电池系统出现含水故障时的现象，设计的实验需要反映干燥和淹水条件下更明显的现象
 	\item The steady-state operation time should be long enough to ensure that the water content inside the fuel cell is in dynamic balance during this period, avoiding the impact of dynamic characteristics on the experimental results.
 	      % 稳态运行时间应足够长，以保证在此期间燃料电池内部的含水量处于动态平衡，避免动态特性对实验结果的影响。
 \end{itemize}
-% 为了验证高功率燃料电池系统水平衡模型的可靠性，需要记录高功率燃料电池系统在不同工况下达到水平衡时的含水状态。因此，实验条件应满足以下三点：（1）：所选运行参数应在燃料电池系统正常运行范围内，避免燃料电池系统出现除含水量故障外的其他故障（如含水量不足）。反应气体供应、空压机喘振、比例阀故障等），（2）为了研究燃料电池系统出现含水故障时的现象，设计的实验需要反映干燥和浸水下更明显的现象 (3) 稳态运行时间应足够长，以保证在此期间燃料电池内部的含水量处于动态平衡，避免动态特性对实验结果的影响。
 \subsection{Experiment Design}
-The literature indicates factors with greatest impact on water content inside fuel cell are air metering ratio, working temperature, and load current \cite{legrosFirstResultsPEMFC2011}. Given the temperature inside stack cannot be measured during operation, the inlet temperature of coolant is treated as working temperature in this research, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in Table \ref{tab:WaterStateExperimentalParameterTable}.
+Literature review highlights that the air-to-fuel ratio, operating temperature, and load current are the predominant factors affecting water content within the fuel cell\cite{legrosFirstResultsPEMFC2011}. Given the temperature inside stack can not be measured during operation, the inlet temperature of coolant is treated as working temperature in this research, and the working temperature in the following text refers to the inlet temperature of the coolant. According to the operating conditions recommended by the system side, a three-factor five-level water content experiment was designed. The parameters of the experiment are shown in Table \ref{tab:WaterStateExperimentalParameterTable}.
 % 文献表明，对燃料电池内部含水量影响最大的因素是空气计量比、工作温度和负载电流\cite{legrosFirstResultsPEMFC2011}。由于运行时无法测量电堆内部温度，因此本文采用冷却剂入口温度作为工作温度，下文中的工作温度均指冷却剂入口温度。根据系统方推荐的运行工况，设计了三因素五级含水量实验。实验的参数显示在\ref{tab:WaterStateExperimentalParameterTable}中。
 \begin{table}
 	\centering
@@ -53,7 +52,7 @@ For the above fuel cell system, the water balance model can be represented as
 	\frac{d m_{w,s y s}}{d t}=Q_{v,i n,s y s}+Q_{w,g e n,c a}-Q_{w,o u t,c a}-Q_{w,o u t,a n}
 \end{equation}
 
-In formula (\ref{waterBalanceModel}), epresents the water
+In Formula (\ref{waterBalanceModel}), epresents the water
 \begin{itemize}
 	\item $m_(w,sys)$ represents the water content inside the fuel cell system, in grams; %代表燃料电池系统内的水含量，以克为单位。
 	\item $Q_(v,in,sys)$ represents the flow rate of water vapor entering the fuel cell system, in g/s; %表示进入燃料电池系统的水蒸气的流量，单位为 g/s
@@ -117,7 +116,7 @@ Therefore, the water flow out of the system from the air side is composed of two
 	\label{waterFlowOutOfTheSystem}
 	Q_{w,out,ca}={\frac{d m_{w,cacollect}}{d t}}+{\frac{Q_{air,out,sys} \cdot p_{v,sat}\cdot M_{v}}{M_{a} \cdot P_{a m b}}}
 \end{equation}
-In formula(\ref{waterFlowOutOfTheSystem}),
+In Formula(\ref{waterFlowOutOfTheSystem}),
 \begin{itemize}
 	\item $m_{w,cacollect}$ represents the mass of the liquid collected by the exhaust water collection device on the air side, in grams(g);
 	\item $Q_{air,out,sys}$ represents the air flow out of the system, in g(gram)/s(second), which can be calculated by the following formula.
@@ -138,7 +137,7 @@ $m_{w,ancollect}$ represents the mass of the liquid collected by the exhaust wat
 In sequence, turn on host computer, system controller, electronic load, auxiliary devices, and impedance testing system; Turn on the water pump, solenoid valve, proportional valve, back pressure valve, air compressor, drain valve, and hydrogen circulation pump in sequence, setting the anode inlet gas pressure 10kPa higher than the cathode inlet gas pressure ($\Delta p=20kPa$).
 % 依次打开主机、系统控制器、电子负载、辅助设备、阻抗测试系统； 依次打开水泵、电磁阀、比例阀、背压阀、空压机、排水阀、氢气循环泵，设置阳极入口气体压力比阴极入口气体压力高10kPa（$\Delta p=20kPa $）。
 \par
-Gradually load the system to 120A, adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air flow rate reaches the air metering coefficient of 2.8 corresponding to the target current, gradually raise the working temperature to $55\pm1^{\circ}C$, and start the temperature closed-loop control program to maintain this temperature; After the working temperature is stable at $55\pm1^{\circ}C$, start timing and run for a total of 15 minutes; Adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air metering ratio gradually decreases in the range of 2 \~ 2.8 with a step size of 0.2; Raise the working temperature to $60\pm1^{\circ}C$, $65\pm1^{\circ}C$, $70\pm1^{\circ}C$ , $73\pm1^{\circ}C$, repeat the testing phase and record the experimental data.
+Gradually load the system to 120A, adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air flow rate reaches the air metering coefficient of 2.8 corresponding to the target current, gradually raise the working temperature to $55\pm1^{\circ}C$, and start the temperature closed-loop control program to maintain this temperature; After the working temperature is stable at $55\pm1^{\circ}C$, start timing and run for a total of 15 minutes; Adjust the speed of the air compressor and the opening angle of the back pressure valve, so that the air metering ratio gradually decreases in the range of $2 \sim 2.8$ with a step size of 0.2; Raise the working temperature to $60\pm1^{\circ}C$, $65\pm1^{\circ}C$, $70\pm1^{\circ}C$ , $73\pm1^{\circ}C$, repeat the testing phase and record the experimental data.
 % 逐渐将系统加载至120A，调节空压机的转速和背压阀的开启角度，使空气流量达到目标电流对应的空气计量系数2.8，逐渐将工作温度升至$55 \pm1^{\circ}C$，并启动温度闭环控制程序，维持该温度； 工作温度稳定在$55\pm1^{\circ}C$后，开始计时，共运行15分钟； 调节空压机转速和背压阀开启角度，使空气计量比在2~2.8范围内逐渐减小，步长为0.2； 将工作温度升高至$60\pm1^{\circ}C$、$65\pm1^{\circ}C$、$70\pm1^{\circ}C$、$73\pm1^{\circ}C$，重复 测试阶段并记录实验数据。
 \par
 Load up to 210A, 300A, repeat all recording steps, until all operating points water content detection experiments are completed.
