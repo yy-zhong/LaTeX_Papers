@@ -13,19 +13,20 @@
 					legend pos=north west,
 					ymajorgrids=true,
 					grid style=dashed,
+					line width=1pt
 				]
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addplot [color=red, mark=square*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
 				\addlegendentry{Ratio 2.0}
 		
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addplot [color=green, mark=diamond*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
 				\addlegendentry{Ratio 2.2}
 		
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addplot [color=orange, mark=asterick] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
 				\addlegendentry{Ratio 2.4}
 		
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addplot [color=cyan, mark=x] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.6:2.6}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
 				\addlegendentry{Ratio 2.6}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
+				\addplot [color=purple, mark=star] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.8:2.8}] {Research_on_water_status_data/airside_waterflow_120A_in_ratio.csv};
 				\addlegendentry{Ratio 2.8}
 			\end{axis}
 		\end{tikzpicture}
@@ -43,14 +44,15 @@
 					ytick distance = 0.5,
 					ymajorgrids=true,
 					grid style=dashed,
+					line width=1pt
 				]
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addplot [color=blue, mark=triangle*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
 				\addlegendentry{Ratio 1.8}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addplot [color=red, mark=square*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
 				\addlegendentry{Ratio 2.0}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addplot [color=green, mark=diamond*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
 				\addlegendentry{Ratio 2.2}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
+				\addplot [color=orange, mark=asterick] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_210A_in_ratio.csv};
 				\addlegendentry{Ratio 2.4}
 			\end{axis}
 			\label{fig:airside_waterflow_210A_ratio}
@@ -71,14 +73,15 @@
 					ytick distance = 0.5,
 					ymajorgrids=true,
 					grid style=dashed,
+					line width=1pt
 				]
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addplot [color=blue, mark=triangle*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{1.8:1.8}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
 				\addlegendentry{Ratio 1.8}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addplot [color=red, mark=square*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.0:2.0}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
 				\addlegendentry{Ratio 2.0}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addplot [color=green, mark=diamond*] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.2:2.2}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
 				\addlegendentry{Ratio 2.2}
-				\addplot table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
+				\addplot [color=orange, mark=asterick] table [x=temperature, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{ratio}}{2.4:2.4}] {Research_on_water_status_data/airside_waterflow_300A_in_ratio.csv};
 				\addlegendentry{Ratio 2.4}
 			\end{axis}
 			

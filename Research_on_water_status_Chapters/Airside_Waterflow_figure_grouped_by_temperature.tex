@@ -8,24 +8,24 @@
 					title={Airside waterflow at 120A load current},
 					xlabel={Airflow Ratio},
 					ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-					xmin=1.8, xmax=3,
-					ymin=2.5, ymax=5.5,
-					ytick distance = 0.5,
-					xtick distance = 0.2,
+					xmin=1.5, xmax=3,
+					ymin=3, ymax=10,
+					ytick distance = 1,
+					xtick distance = 0.5,
 					legend pos=north west,
 					ymajorgrids=true,
 					grid style=dashed,
 					legend style={font=\small}
 				]
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{55:55}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
+				\addplot [color=blue, mark=triangle*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{55:55}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
 				\addlegendentry{Temperature 55}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{60:60}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
+				\addplot [color=red, mark=square*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{60:60}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
 				\addlegendentry{Temperature 60}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
+				\addplot [color=cyan, mark=x] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
 				\addlegendentry{Temperature 65}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
+				\addplot [color=orange, mark=asterick] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
 				\addlegendentry{temperature 70}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
+				\addplot [color=brown, mark=oplus*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_120A_in_temperature.csv};
 				\addlegendentry{Temperature 73}
 			\end{axis}
 		\end{tikzpicture}
@@ -37,24 +37,24 @@
 					title={Airside waterflow at 210A load current},
 					xlabel={Airflow Ratio},
 					ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-					xmin=1.7, xmax=2.5,
-					ymin=4, ymax=8,
-					ytick distance = 0.5,
-					xtick distance = 0.1,
+					xmin=1.5, xmax=3,
+					ymin=3, ymax=10,
+					ytick distance = 1,
+					xtick distance = 0.5,
 					legend pos=north west,
 					ymajorgrids=true,
 					grid style=dashed,
 					legend style={font=\small}
 				]
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{55:55}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
+				\addplot [color=blue, mark=triangle*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{55:55}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
 				\addlegendentry{Temperature 55}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{60:60}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
+				\addplot [color=red, mark=square*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{60:60}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
 				\addlegendentry{Temperature 60}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
+				\addplot [color=cyan, mark=x] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
 				\addlegendentry{Temperature 65}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
+				\addplot [color=orange, mark=asterick] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
 				\addlegendentry{temperature 70}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
+				\addplot [color=brown, mark=oplus*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_210A_in_temperature.csv};
 				\addlegendentry{Temperature 73}
 			\end{axis}
 			
@@ -68,24 +68,25 @@
 					title={Airside waterflow at 300A load current},
 					xlabel={Airflow Ratio},
 					ylabel={Airside Water Flow/$g \cdot s^{-1}$},
-					xmin=1.7, xmax=2.5,
-					ymin=7, ymax=10.5,
-					ytick distance = 0.5,
-					xtick distance = 0.1,
-					legend pos=north west,
+					xmin=1.5, xmax=3,
+					ymin=3, ymax=10,
+					ytick distance = 1,
+					xtick distance = 0.5,
+					legend pos=south east,
 					ymajorgrids=true,
 					grid style=dashed,
-					legend style={font=\small}
+					legend style={font=\small},
+					font=\bfseries\large
 				]
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{63:63}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
+				\addplot [color=green, mark=diamond*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{63:63}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 				\addlegendentry{Temperature 63}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
+				\addplot [color=cyan, mark=x] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{65:65}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 				\addlegendentry{Temperature 65}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{68:68}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
+				\addplot [color=purple, mark=star] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{68:68}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 				\addlegendentry{Temperature 68}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
+				\addplot [color=orange, mark=asterick] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{70:70}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 				\addlegendentry{temperature 70}
-				\addplot table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
+				\addplot [color=brown, mark=oplus*] table [x=ratio, y=waterflow, col sep=comma, restrict expr to domain={\thisrow{temperature}}{73:73}] {Research_on_water_status_data/airside_waterflow_300A_in_temperature.csv};
 				\addlegendentry{Temperature 73}
 			\end{axis}
 			
